@@ -314,6 +314,8 @@ git push
 With the couple of changed made in the terraform/ folder. 
 Github Actions workflow will be trigger. 
 Go to the repo on Github abd click on the Actions button to the see the Github Action workflow running.
+![Screenshot 1525](https://github.com/jainyk/reactjs/blob/main/.github/workflows/Screenshot%20(1525).png)
+
 
 Go to the EC2 on AWS Console
 Now, connect to your Jumphost-Server by clicking on Connect.
@@ -355,6 +357,8 @@ This might take 15-20 minutes. Also adjust the node count
 ```
 eksctl create cluster --name quizapp-eks-cluster --region us-east-1 --node-type t2.large --nodes-min 2 --nodes-max 4
 ```
+![Screenshot 2024-02-28 at 2 51 37 PM](https://github.com/jainyk/reactjs/blob/main/.github/workflows/Screenshot%20(1514).png)
+
 
 ![Screenshot 2024-02-28 at 2 51 37 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/2cea7f67-7d6a-445c-9863-e19bccf580e2)
 
@@ -377,6 +381,7 @@ Download the policy for the LoadBalancer prerequisite.
 ```
 curl -O https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.5.4/docs/install/iam_policy.json
 ```
+![Screenshot 1526](https://github.com/jainyk/reactjs/blob/main/.github/workflows/Screenshot%20(1526).png)
 #### Create IAM policy
 Create the IAM policy using the below command
 ```
@@ -420,6 +425,8 @@ Then go to Security and click on New Access Token. Give it a name in the Access 
 
 
 ![Screenshot 2024-02-28 at 10 58 48 AM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/e7087161-6959-4939-9524-4543bdc24b12)
+
+![Screenshot 1518](https://github.com/jainyk/reactjs/blob/main/.github/workflows/Screenshot%20(1518).png)
 
 
 ### Step 7: Configure Sonar Cloud for our app_code Pipeline
@@ -511,6 +518,8 @@ Copy this token to Github app code repository secret
 Name: SNYK_TOKEN
 secret: paste the snyk token
 
+![Screenshot 1529](https://github.com/jainyk/reactjs/blob/main/.github/workflows/Screenshot%20(1519).png)
+
 
 ### Step 9: Review and Deploy Application Code
 Review the app code repo.
@@ -567,6 +576,8 @@ kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}
 ```
 
 ![Screenshot 2024-02-28 at 3 05 00 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/0652828e-2f12-40fa-aee4-c8e140d8ffdb)
+
+![Screenshot 1515](https://github.com/jainyk/reactjs/blob/main/.github/workflows/Screenshot%20(1515).png)
 
 
 You can validate whether the Load Balancer is created or not by going to the AWS Console
@@ -645,7 +656,7 @@ Install the Grafana
 helm install grafana grafana/grafana -n monitoring --create-namespace
 ```
 
-![Screenshot 2024-02-28 at 3 21 33 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/9461a2ab-df77-4399-b7f4-3180064dab91)
+![Screenshot 1516](https://github.com/jainyk/reactjs/blob/main/.github/workflows/Screenshot%20(1516).png)
 
 
 Get Grafana **admin** user password using:
@@ -833,7 +844,7 @@ Click on CREATE.
 
 ArgoCD will deploy all the application in the kubernetes-manifest folder
 
-![Screenshot 2024-03-09 at 7 10 37 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/f012af49-7a74-4f9d-8f5b-d0a7b6959493)
+![Screenshot 1528](https://github.com/jainyk/reactjs/blob/main/.github/workflows/Screenshot%20(1528).png)
 
 Deployment is synced and healthy 
 
