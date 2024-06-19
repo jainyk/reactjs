@@ -1,8 +1,6 @@
 # Kubernetes DevSecOps CICD Project Using Github Actions and ArgoCD
 
 
-[![Master Three-Tier Application | A Complete DevSecOps Guide on AWS with Kubernetes, GitOps & ArgoCD](http://img.youtube.com/vi/EVG51U3VcYs/0.jpg)](https://www.youtube.com/watch?v=EVG51U3VcYs "Mastering Cloud-Native Applications: A Complete DevSecOps Guide on AWS with Kubernetes")
-
 Below is the flow diagram for the project.
 
 ![gif2](https://github.com/cloudcore-hub/reactjs-quiz-app/assets/88560609/a0dfce93-3bde-45af-b82a-d7c9e2c47294)
@@ -94,12 +92,6 @@ Before starting this project, ensure you have the following prerequisites:
 5. **Repeat for the second repo:**  
    - You can name the second repo **reactjs** for simplicity
 
-When done, run the following command in your terminal
-
-```
-git config --global user.name <your github user name>
-git config --global user.email <your github email>
-```
 
 ### Step 2: CREATE AWS Resources
 #### Create an IAM user and generate the AWS Access key
@@ -124,11 +116,8 @@ Click on Next.
 
 ![Screenshot 2024-02-28 at 9 49 49 AM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/318f6640-5346-41e1-bcde-f7efdf73e2fb)
 
-Click on Create user
 
-![Screenshot 2024-02-28 at 9 50 05 AM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/d9dc1a65-de40-4d74-a311-089638b5cc58)
-
-Now, Select your created user then click on **Security credentials** and generate access key by clicking on Create access key.
+Click on Create user and select your created user then click on **Security credentials** and generate access key by clicking on Create access key.
 
 ![Screenshot 2024-02-28 at 9 50 16 AM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/28d6572c-1d0f-4877-a8af-f3ccfbfaaba5)
 
@@ -295,7 +284,6 @@ eksctl create cluster --name quizapp-eks-cluster --region us-east-1 --node-type 
 ![Screenshot 2024-02-28 at 2 51 37 PM](https://github.com/jainyk/reactjs/blob/main/.github/workflows/Screenshot%20(1514).png)
 
 
-![Screenshot 2024-02-28 at 2 51 37 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/2cea7f67-7d6a-445c-9863-e19bccf580e2)
 
 
 Run the command below to connect to the EKS cluster created  allowing Kubernetes operations on that cluster.
@@ -333,7 +321,6 @@ Add your aws 12-digit account ID
 eksctl create iamserviceaccount --cluster=quizapp-eks-cluster --namespace=kube-system --name=aws-load-balancer-controller --role-name AmazonEKSLoadBalancerControllerRole --attach-policy-arn=arn:aws:iam::<ACCOUNT-ID>:policy/AWSLoadBalancerControllerIAMPolicy --approve --region=us-east-1
 ```
 
-![Screenshot 2024-02-28 at 2 56 12 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/6bb969ac-1118-482a-8b4c-bf5e9ecd8260)
 
 Run the below command to deploy the AWS Load Balancer Controller using Helm
 
@@ -445,7 +432,6 @@ secret: https://sonarcloud.io
 #### 5. Secure Your Token
 - Copy the generated token and keep it secure. Do not share your token in public places.
 
-![Screenshot 2024-03-13 at 2 00 50 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/b4835533-5bef-4262-bf6c-e1c79fcf7941)
 
 You can now use this token to authenticate and integrate Snyk with your projects or CI/CD pipelines.
 
@@ -502,7 +488,6 @@ kubectl get pods -n argocd
 ```
 
 
-![Screenshot 2024-02-28 at 3 04 12 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/9985c1cc-f1e6-45c1-9c82-b906b21699a4)
 
 
 Now, expose the argoCD server as LoadBalancer using the below command
@@ -510,7 +495,6 @@ Now, expose the argoCD server as LoadBalancer using the below command
 kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
 ```
 
-![Screenshot 2024-02-28 at 3 05 00 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/0652828e-2f12-40fa-aee4-c8e140d8ffdb)
 
 ![Screenshot 1515](https://github.com/jainyk/reactjs/blob/main/.github/workflows/Screenshot%20(1515).png)
 
