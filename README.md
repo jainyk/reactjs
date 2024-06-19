@@ -1,16 +1,13 @@
 # Kubernetes DevSecOps CICD Project Using Github Actions and ArgoCD
 
-## Video Tutorial
-
-For a comprehensive guide on deploying and managing cloud-native applications using AWS, Kubernetes, and DevSecOps tools, watch the detailed tutorial:
 
 [![Master Three-Tier Application | A Complete DevSecOps Guide on AWS with Kubernetes, GitOps & ArgoCD](http://img.youtube.com/vi/EVG51U3VcYs/0.jpg)](https://www.youtube.com/watch?v=EVG51U3VcYs "Mastering Cloud-Native Applications: A Complete DevSecOps Guide on AWS with Kubernetes")
 
-Click on the image above to watch the video.
+Below is the flow diagram for the project.
 
 ![gif2](https://github.com/cloudcore-hub/reactjs-quiz-app/assets/88560609/a0dfce93-3bde-45af-b82a-d7c9e2c47294)
 
-- [Step 1: SSH Exchange between local computer and Github account.](#step-1-ssh-exchange-between-local-computer-and-github-account)
+- [Step 1: SSH Exchange betIen local computer and Github account.](#step-1-ssh-exchange-betIen-local-computer-and-github-account)
 - [Step 2: CREATE AWS Resources.](#step-2-create-aws-resources)
 - [Step 3: Install Terraform & AWS CLI.](#step-3-install-terraform--aws-cli)
 - [Step 4: Deploy the Jumphost Server(EC2) using Terraform on Github Actions.](#step-4-deploy-the-jumphost-server-ec2-using-terraform-on-github-actions)
@@ -28,10 +25,10 @@ Click on the image above to watch the video.
 
 
 ### Project Introduction:
-Welcome to the End-to-End DevSecOps Kubernetes Project guide! In this comprehensive project, we will walk through the process of setting up a robust Three-Tier architecture on AWS using Kubernetes, DevOps best practices, and security measures. This project aims to provide hands-on experience in deploying, securing, and monitoring a scalable application environment.
+In this comprehensive project, I will walk through the process of setting up a robust Three-Tier architecture on AWS using Kubernetes, DevOps best practices, and security measures. This project aims to provide hands-on experience in deploying, securing, and monitoring a scalable application environment.
 
 ### Project Overview:
-In this project, we will cover the following key aspects:
+In this project, I will cover the following key aspects:
 
 1. IAM User Setup: Create an IAM user on AWS with the necessary permissions to facilitate deployment and management activities.
 2. Infrastructure as Code (IaC): Use Terraform and AWS CLI to set up the Jumphost server (EC2 instance) on AWS.
@@ -57,55 +54,7 @@ Before starting this project, ensure you have the following prerequisites:
 - Terraform and AWS CLI installed on your local computer.
 - Basic familiarity with Kubernetes, Docker, CICD pipelines, Github Actions, Terraform, and DevOps principles.
 
-### Step 1: SSH Exchange between local computer and Github account
-**cd** to home dir and create **.ssh** folder if it doesn't exist 
-
-```
-cd ~/.ssh
-ssh-keygen
-```
-![Screenshot 2024-02-28 at 9 22 06 AM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/6fdcda62-9178-45c2-a1d6-bc7cf778cd78)
-
-
-Give the key a name **key**. Then list **ls** the content of .ssh/ folder.
-
-Copy the content of the public key
-```
-cat key.pub
-```
-
-Go to the Settings of your Github account from profile section.
-Go to Access Section on the left **SSH and GPG Keys** and **New SSH key**. Give a title and paste the content of key.pub
-
-![Screenshot 2024-02-28 at 9 27 39 AM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/9cfbd7f0-27f9-4180-b5e1-a18e2eb8386f)
-
-
-Back to the computer terminal and run the command
-```
-export GIT_SSH_COMMAND="ssh -i ~/.ssh/key"
-```
-Create a project folder in your **Desktop** or anywhere you'd prefer
-
-```
-mkdir ~/Desktop/project && cd ~/Desktop/project
-```
-#### Git Clone the application code and IaC repositories 
-```
-git clone https://github.com/cloudcore-hub/reactjs-quiz-app.git
-```
-```
-git clone https://github.com/cloudcore-hub/iac_code.git
-```
-```
-cd iac_code
-git config core.sshCommand "ssh -i ~/.ssh/key -F /dev/null"
-```
-```
-cd ..
-cd reactjs-quiz-app
-git config core.sshCommand "ssh -i ~/.ssh/key -F /dev/null"
-```
-![Screenshot 2024-02-28 at 9 34 55 AM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/20b80975-9212-4fe8-95cf-4d1b63317665)
+### Step 1: SSH Exchange betIen local computer and Github account
 
 
 #### Connect the repository to your Github
@@ -122,20 +71,6 @@ git config core.sshCommand "ssh -i ~/.ssh/key -F /dev/null"
 
 ![Screenshot 2024-02-28 at 9 40 08 AM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/790b34f0-8a92-47dd-992c-b47359884f48)
 
-2. **Change the Remote URL of Your Local Repository:**
-   - Open your terminal and navigate to the root directory of your local repository.
-   - Check the current remote URL with:
-     ```
-     cd iac_code
-     git remote -v
-     ```
-   - Change the remote URL to your newly created repository with:
-     ```
-     git remote set-url origin <YOUR_NEW_REPOSITORY_URL>
-     ```
-     Replace **YOUR_NEW_REPOSITORY_URL** with the URL of your new GitHub repository, like **https://github.com/yourusername/yourrepositoryname.git**.
-
-![Screenshot 2024-02-28 at 9 43 51 AM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/0e2959bb-d704-4c2e-a84d-4363d0364711)
 
 
 3. **Push Your Code to the New Repository:**
@@ -336,7 +271,7 @@ and try SSHing again
 
 
 ### Step 5: Configure the Jumphost
-We have installed some services such as Docker, Terraform, Kubectl, eksctl, AWSCLI, Trivy
+I have installed some services such as Docker, Terraform, Kubectl, eksctl, AWSCLI, Trivy
 
 Validate whether all our tools are installed or not.
 ```
@@ -491,7 +426,7 @@ secret: https://sonarcloud.io
 ### Step 8: Setup Synk Token for the app code pipeline 
 
 #### 1. Sign Up for Snyk
-- Visit the [Snyk website](https://snyk.io) and click on the "Sign Up" button.
+- Visit the [Snyk Ibsite](https://snyk.io) and click on the "Sign Up" button.
 - You can sign up using your GitHub, GitLab, Bitbucket account, or an email address.
 
 #### 2. Verify Your Email
@@ -549,7 +484,7 @@ or
 kubectl get ns
 ```
 
-Now, we will install argoCD.
+Now, I will install argoCD.
 To do that, create a separate namespace for it and apply the argocd configuration for installation.
 
 ```
@@ -600,9 +535,9 @@ Click on the below link which is appearing under Hide advanced
 
 
 
-Now, we need to get the password for our argoCD server to perform the deployment.
+Now, I need to get the password for our argoCD server to perform the deployment.
 
-To do that, we need a pre-requisite which is jq. This has already been Installed or you can install it using the command below.
+To do that, I need a pre-requisite which is jq. This has already been Installed or you can install it using the command below.
 ```
 sudo apt install jq -y
 ```
@@ -629,9 +564,9 @@ Here is our ArgoCD Dashboard.
 
 
 ### Step 11: Set up the Monitoring for our EKS Cluster using Prometheus and Grafana. 
-We can monitor the Cluster Specifications and other necessary things.
+I can monitor the Cluster Specifications and other necessary things.
 
-We will achieve the monitoring using Helm
+I will achieve the monitoring using Helm
 Add all the helm repos, the prometheus, grafana repo by using the below command
 ```
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
@@ -673,9 +608,9 @@ kubectl get svc -n monitoring
 ![Screenshot 2024-02-28 at 3 27 11 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/9fcf4f6b-3d50-418b-ab77-e56f8de2ae07)
 
 
-Now, we need to access our Prometheus and Grafana consoles from outside of the cluster.
+Now, I need to access our Prometheus and Grafana consoles from outside of the cluster.
 
-For that, we need to change the Service type from ClusterIP to LoadBalancer
+For that, I need to change the Service type from ClusterIP to LoadBalancer
 
 Edit the prometheus-server service
 ```
@@ -760,7 +695,7 @@ Click on Save & test.
 
 ![Screenshot 2024-03-13 at 2 08 01 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/8d8988d5-b6dd-4f48-bf0c-055a796337c5)
 
-Now, we will create a dashboard to visualize our Kubernetes Cluster Logs.
+Now, I will create a dashboard to visualize our Kubernetes Cluster Logs.
 Click on Dashboard.
 
 ![Screenshot 2024-02-28 at 5 08 53 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/1b697dbb-bf45-4320-ad2d-4e9d3107441d)
@@ -817,7 +752,7 @@ If your Connection Status is Successful it means repository connected successful
 ![Screenshot 2024-02-28 at 6 26 55 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/701b6865-ed8a-4bc3-ae9b-e7382ffeafe4)
 
 
-Now, we will create our application which will deploy the frontend, backend. database and ingress
+Now, I will create our application which will deploy the frontend, backend. database and ingress
 Click on CREATE APPLICATION.
 
 ![Screenshot 2024-03-13 at 2 10 48 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/d6740e57-607c-4e93-9a3c-7fbf35ac21a0)
@@ -891,9 +826,8 @@ Review your configurations and click on the "Create records" button to create yo
 By following these steps, you'll successfully create an A-record in AWS Route 53 that points to your Application Load Balancer, allowing you to route traffic from your domain to your ALB.
  
 
-Share the quizapp.cloudcorehub.com
+Share the seederleecher.in
 
-Note: I have created a subdomain quizapp.cloudcorehub.com
 
 ![Screenshot 1529](https://github.com/jainyk/reactjs/blob/main/.github/workflows/Screenshot%20(1529).png)
 
@@ -949,7 +883,7 @@ terraform destroy -auto-approve
 ```
 
 ### Conclusion: 
-In this comprehensive DevSecOps Kubernetes project, we successfully:
+In this comprehensive DevSecOps Kubernetes project, I successfully:
 
 - Established IAM user and Terraform for AWS setup.
 - Deployed Infrastructure on AWS using Github Actions and Terraform and, configured tools.
