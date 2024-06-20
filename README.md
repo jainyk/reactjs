@@ -63,11 +63,8 @@ Before starting this project, ensure you have the following prerequisites:
    - Click the **New** icon in the top-right corner to create new repository.
 
 
-![Screenshot 2024-02-28 at 9 38 08 AM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/815b0603-14ab-42fd-9756-3d8484909740)
 
    - Name your repository **iac**, set it to public or private, and click "Create repository."
-
-![Screenshot 2024-02-28 at 9 40 08 AM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/790b34f0-8a92-47dd-992c-b47359884f48)
 
 
 
@@ -85,6 +82,8 @@ Before starting this project, ensure you have the following prerequisites:
      git push -u origin master
      ```
      If your main branch is named differently (e.g., **main**), replace **master** with the correct branch name.
+
+     TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 
 4. **Verify the Push:**
    - Refresh the GitHub page of your repository to see if the code has been pushed successfully.
@@ -143,8 +142,7 @@ Here, you will see that you got the credentials and also you can download the CS
 2. **Access the Repository Settings:**
    - Click on the "Settings" tab near the top of the repository page.
 
-![Screenshot 2024-02-28 at 9 54 15 AM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/c56ffcbe-07ba-42d3-aa42-ee984571064b)
-
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 
 3. **Open the Secrets Section:**
    - On the left sidebar, click on "Secrets and variables."
@@ -254,9 +252,6 @@ chmod 400 key.pem
 
 ![Screenshot 2024-02-28 at 11 58 56 AM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/677ae172-64bc-4a1d-b1a5-10624a012092)
 
-and try SSHing again
-
-![Screenshot 2024-02-28 at 1 25 31 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/e8c03910-6f3e-4032-8e54-10eac073b7f6)
 
 
 ### Step 5: Configure the Jumphost
@@ -273,7 +268,6 @@ trivy --version
 eksctl version
 ```
 
-![Screenshot 2024-02-28 at 1 29 29 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/45eb2088-ab34-4a0d-ad08-0ebe7a30dd29)
 
 
 #### Create an eks cluster using the below commands.
@@ -372,15 +366,13 @@ Sonar cloud will be using for Code Quality Analysis of our application code.
 - Follow the on-screen instructions to select your account and set up a new organization.
 - Choose **Public** for the organization’s visibility.
 
-![Screenshot 2024-02-28 at 1 10 52 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/5323ca56-5186-4cd9-b8ac-1e665244876c)
-
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 
 #### 3. Create a Project
 
 - In your new organization, click on **+** and select **Analyze new project**. Enter name and key. Then clikc on previous version and save
 
-![Screenshot 2024-02-28 at 1 13 06 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/e49fe740-1115-4579-b7ad-071a8de706bf)
-
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 
 #### 4. Create a Token
 
@@ -388,7 +380,8 @@ Sonar cloud will be using for Code Quality Analysis of our application code.
 - Under **Tokens**, enter a name for your new token and click **Generate**.
 - Save the generated token securely. You will use this token in your analysis commands or CI/CD configuration.
 
-![Screenshot 2024-02-28 at 1 13 55 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/ddb8c15e-d9c4-41be-9e1a-0d3344d38f1c)
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+
 
 
 **Note**: Keep your token confidential and use it as per the instructions for analyzing your project, either locally using SonarScanner or through your CI/CD pipeline.
@@ -478,7 +471,6 @@ kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/v2.4.7/manifests/install.yaml
 ```
 
-![Screenshot 2024-02-28 at 3 03 47 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/c25bbb21-1a8f-4dee-8322-43603abcc3d8)
 
 
 To confirm argoCD pods are running.
@@ -532,19 +524,11 @@ export ARGO_PWD=`kubectl -n argocd get secret argocd-initial-admin-secret -o jso
 echo $ARGO_PWD
 ```
 
-![Screenshot 2024-02-28 at 3 15 28 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/fde544fa-f4c3-455f-bb05-6cfbc63f1acf)
 
 
 
 Enter the username **admin** and password in argoCD and click on SIGN IN.
 
-![Screenshot 2024-02-28 at 3 15 05 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/71740bd1-da78-44d5-b0b4-9bcb3bb78235)
-
-
-Here is our ArgoCD Dashboard.
-
-
-![Screenshot 2024-02-28 at 3 15 45 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/19758d15-162c-467b-8325-9eaf3ed2350d)
 
 
 ### Step 11: Set up the Monitoring for our EKS Cluster using Prometheus and Grafana. 
@@ -559,7 +543,6 @@ helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 helm repo update
 ```
 
-![Screenshot 2024-02-28 at 3 20 12 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/bbd88405-2fbe-4d7d-9217-d95da035b767)
 
 
 Install the prometheus
@@ -567,7 +550,6 @@ Install the prometheus
 helm install prometheus prometheus-community/kube-prometheus-stack -n monitoring --create-namespace
 ```
 
-![Screenshot 2024-02-28 at 3 20 38 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/55e2db6d-a268-4e86-814a-c9b77a73a07d)
 
 
 Install the Grafana 
@@ -589,7 +571,6 @@ Now, confirm the services using the below command
 kubectl get svc -n monitoring
 ```
 
-![Screenshot 2024-02-28 at 3 27 11 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/9fcf4f6b-3d50-418b-ab77-e56f8de2ae07)
 
 
 Now, I need to access our Prometheus and Grafana consoles from outside of the cluster.
@@ -623,7 +604,6 @@ Now, if you list again the service then, you will see the LoadBalancers DNS name
 kubectl get svc -n monitoring
 ```
 
-![Screenshot 2024-02-28 at 3 39 14 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/5ddfcab1-8f81-4490-974f-f7c54b0ce73e)
 
 
 You can also validate from AWS LB console.
@@ -655,7 +635,6 @@ Get your **admin** user password by running:
 ```
 kubectl get secret --namespace monitoring grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
 ```
-![Screenshot 2024-02-28 at 5 03 27 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/36c327d4-fff6-4738-a09d-0e183abc0af8)
 
 
 The username will be admin and the password will be from the command above for your Grafana LogIn.
@@ -728,7 +707,6 @@ Click on CONNECT REPO USING HTTPS
 Now, provide the repository name where your Manifests files are present.
 Provide the username and GitHub Personal Access token if your repo is private and click on CONNECT.
 
-![Screenshot 2024-02-28 at 6 26 11 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/7cb2b7a6-dc0c-482c-9cde-f3ad10bb5dd5)
 
 
 If your Connection Status is Successful it means repository connected successfully.
@@ -751,8 +729,6 @@ Provide the details as it is provided in the below snippet and scroll down.
 Select the same repository that you configured in the earlier step.
 In the Path, provide the location where your Manifest files are presented and provide other things as shown in the below screenshot.
 
-
-![Screenshot 2024-03-13 at 2 13 00 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/3b1cceff-752c-4402-a23a-5ac024f93ba2)
 
 
 Click on CREATE.
@@ -791,7 +767,7 @@ From the Route 53 dashboard, choose "Hosted zones" under the DNS management sect
 
 #### 3: Create Record
 
-![Screenshot 2024-02-29 at 4 49 56 AM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/bd97eb50-1d3c-4bd3-af06-d45250a469b5)
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 
 - Click on the "Create record" button.
 - In the "Record name" field, enter the subdomain or leave it blank for the root domain.
@@ -801,7 +777,7 @@ From the Route 53 dashboard, choose "Hosted zones" under the DNS management sect
 - Choose the ALB (it's identified by its DNS name) from the dropdown.
 - (Optional) Adjust the "Routing policy" and "Record ID" as needed.
 
-![Screenshot 2024-02-29 at 4 53 37 AM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/b8f7bbc7-8605-428e-a7e9-c9fe95ae0357)
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 
 #### 4: Confirm and Create
 
