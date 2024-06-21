@@ -764,13 +764,19 @@ Follow these steps to create an A-record in AWS Route 53 that points to your App
 
 In the search bar at the top, type "Route 53" and click on the Route 53 service to open the Route 53 dashboard.
 
-![Screenshot 2024-02-28 at 6 42 29 PM](https://github.com/jainyk/reactjs/blob/main/.github/workflows/Screenshot%20(2).png)
+
 
 #### 2: Select Hosted Zone
 
 From the Route 53 dashboard, choose "Hosted zones" under the DNS management section. Then select the hosted zone where you want to add the A-record.
 
-#### 3: Create Record
+#### 3: Copy the Nameserver 
+
+From the route53 portal, copy the nameserver provided by AWS and go to godaddy DNS nameserver setting and replace it with AWS nameserver.
+
+![Screenshot 2024-02-28 at 6 42 29 PM](https://github.com/jainyk/reactjs/blob/main/.github/workflows/Screenshot%20(2).png)
+
+#### 4: Create Record
 
 TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 
