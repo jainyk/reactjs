@@ -66,6 +66,7 @@ Before starting this project, ensure you have the following prerequisites:
 
    - Name your repository **iac**, set it to public or private, and click "Create repository."
 
+![Screenshot 5](https://github.com/jainyk/reactjs/blob/main/.github/workflows/Screenshot%20(5).png)
 
 
 3. **Push Your Code to the New Repository:**
@@ -161,6 +162,9 @@ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 
 
 6. **Repeat 1-5 for app code repository:**
+
+![Screenshot 2024-02-28 at 9 55 10 AM](https://github.com/jainyk/reactjs/blob/main/.github/workflows/Screenshot%20(13).png)
+
 
 #### Create S3 Bucket for Terraform State files 
 Create S3 bucket for the terraform state file. Add the bucket name in the iac_code repo secret. Name: **BUCKET_TF**, Value: **<your-bucket-name>**
@@ -366,13 +370,12 @@ Sonar cloud will be using for Code Quality Analysis of our application code.
 - Follow the on-screen instructions to select your account and set up a new organization.
 - Choose **Public** for the organization’s visibility.
 
-TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+![Screenshot 2024-02-28 at 1 10 14 PM](https://github.com/jainyk/reactjs/blob/main/.github/workflows/Screenshot%20(10).png)
 
 #### 3. Create a Project
 
 - In your new organization, click on **+** and select **Analyze new project**. Enter name and key. Then clikc on previous version and save
 
-TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 
 #### 4. Create a Token
 
@@ -380,7 +383,7 @@ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 - Under **Tokens**, enter a name for your new token and click **Generate**.
 - Save the generated token securely. You will use this token in your analysis commands or CI/CD configuration.
 
-TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+![Screenshot 10](https://github.com/jainyk/reactjs/blob/main/.github/workflows/Screenshot%20(10).png)
 
 
 
@@ -760,6 +763,8 @@ Follow these steps to create an A-record in AWS Route 53 that points to your App
 #### 1: Open Route 53 Dashboard
 
 In the search bar at the top, type "Route 53" and click on the Route 53 service to open the Route 53 dashboard.
+
+![Screenshot 2024-02-28 at 6 42 29 PM](https://github.com/jainyk/reactjs/blob/main/.github/workflows/Screenshot%20(2).png)
 
 #### 2: Select Hosted Zone
 
