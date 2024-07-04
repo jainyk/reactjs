@@ -223,12 +223,12 @@ Navigate to the terraform folder
 
 Do some modifications to the **terraform.tf** file such as changing the bucket name (make sure you have created the bucket manually on AWS console). 
 
-![Screenshot 2024-03-13 at 1 57 56 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/9f581c1c-7fbe-4359-9f33-1dc198810383)
+![Screenshot 2024-03-13 at 1 57 56 PM](https://github.com/jainyk/reactjs/blob/main/.github/workflows/Screenshot%2016.png)
 
 
 Now, in the **variables.tf** you can change some of the variable **region**, **vpc-name**, **ami_id**, **instance_type**, but you must replace the **instance_keypair** with the Pem File name as you have for your Pem file. Provide the Pem file name that is already created on AWS.
 
-![Screenshot 2024-03-13 at 1 59 18 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/41747c40-8efe-4e02-aacb-28ce1415a8ec)
+![Screenshot 2024-03-13 at 1 59 18 PM](https://github.com/jainyk/reactjs/blob/main/.github/workflows/Screenshot%2017.png)
 
 
 Review **.github/workflows/terraform.yml**
@@ -447,7 +447,7 @@ Open the folder in Visual Studio Code
 Update the kubernetes-manifest/ingress.yaml file with your DNS
 Review .github/workflows/quizapp.yml file
 
-![Screenshot 2024-03-13 at 2 02 14 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/b33b5756-ad82-437c-969a-5f178be1318e)
+![Screenshot 2024-03-13 at 2 02 14 PM](https://github.com/jainyk/reactjs/blob/main/.github/workflows/Screenshot%2018.png)
 
 ```
 git commit -am "updated manifest files"
