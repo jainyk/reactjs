@@ -714,7 +714,6 @@ Provide the username and GitHub Personal Access token if your repo is private an
 
 If your Connection Status is Successful it means repository connected successfully.
 
-![Screenshot 2024-02-28 at 6 26 55 PM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/701b6865-ed8a-4bc3-ae9b-e7382ffeafe4)
 
 
 Now, I will create our application which will deploy the frontend, backend. database and ingress
