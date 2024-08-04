@@ -169,7 +169,7 @@ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 #### Create S3 Bucket for Terraform State files 
 Create S3 bucket for the terraform state file. Add the bucket name in the iac_code repo secret. Name: **BUCKET_TF**, Value: **<your-bucket-name>**
 
-![Screenshot 2024-02-28 at 9 58 13 AM](https://github.com/cloudcore-hub/Kubernetes-DevSecOps-CI-CD-Project/assets/88560609/47797825-5ca9-4564-841b-b8a30c77ddac)
+![Screenshot 2024-02-28 at 9 58 13 AM](https://github.com/jainyk/reactjs/blob/main/.github/workflows/Screenshot-20.png)
 
 
 #### Create key pair 
